@@ -118,21 +118,59 @@ body.contraste .titre-page{ background: #000; color: #FFD500; border-top: 4px so
 .fil-ariane a{ color: var(--blanc); }
 body.contraste .fil-ariane a{ color: var(--focus); }
 
-/* ---------- Héros (page d'accueil uniquement) ---------- */
-.heros{
-  background: var(--vert-fonce); color: var(--blanc);
-  padding: 3rem 1rem;
+/* ---------- Héros photo (page d'accueil) — inspiré d'afb.org, couleurs du site ---------- */
+.hero-afb{
+  display: flex; flex-wrap: wrap; background: var(--vert-fonce); color: var(--blanc);
+  overflow: hidden;
 }
-body.contraste .heros{ background: #000; color: #FFD500; border-top: 4px solid #FFD500; border-bottom: 4px solid #FFD500; }
-.heros-int{ max-width: 62rem; margin: 0 auto; }
-.heros h1{ font-size: 2.1rem; line-height: 1.3; max-width: 28ch; }
-.heros p{ font-size: 1.2rem; max-width: 60ch; margin-top: 1.25rem; }
+body.contraste .hero-afb{ background: #000; color: #FFD500; border-bottom: 4px solid #FFD500; }
+.hero-afb .hero-texte{
+  flex: 1 1 360px; padding: 3.5rem 2rem; display: flex; flex-direction: column;
+  justify-content: center; gap: 1.1rem;
+}
+.hero-afb .hero-texte h1{ font-size: 2.3rem; line-height: 1.25; max-width: 20ch; }
+.hero-afb .hero-texte p{ font-size: 1.15rem; max-width: 48ch; margin: 0; }
+.hero-afb .hero-boutons{ display: flex; flex-wrap: wrap; gap: .9rem; margin-top: .5rem; }
+.hero-afb .hero-photo{
+  flex: 1 1 360px; min-height: 320px; background-size: cover; background-position: center;
+}
 .points-braille{
   display: inline-grid; grid-template-columns: repeat(2, 14px); gap: 7px;
-  margin-bottom: 1.5rem;
 }
 .points-braille i{ width: 14px; height: 14px; border-radius: 50%; background: var(--blanc); display: block; }
 body.contraste .points-braille i{ background: #FFD500; }
+
+.bouton-cta{
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--blanc); color: var(--vert-fonce);
+  font-weight: 700; font-size: 1.05rem; min-height: 44px;
+  padding: .8rem 1.6rem; border-radius: 999px; text-decoration: none;
+  border: 2px solid var(--blanc);
+}
+.bouton-cta:hover{ background: transparent; color: var(--blanc); }
+.bouton-cta.secondaire{ background: transparent; color: var(--blanc); }
+.bouton-cta.secondaire:hover{ background: var(--blanc); color: var(--vert-fonce); }
+body.contraste .bouton-cta{ background: var(--focus); color: #000; border-color: var(--focus); }
+body.contraste .bouton-cta:hover{ background: transparent; color: var(--focus); }
+body.contraste .bouton-cta.secondaire{ color: var(--focus); border-color: var(--focus); }
+body.contraste .bouton-cta.secondaire:hover{ background: var(--focus); color: #000; }
+
+/* ---------- Bandeau d'action (bas de l'accueil) ---------- */
+.cta-band{ background: var(--gris-doux); padding: 3rem 1rem; }
+.cta-band-int{ max-width: 62rem; margin: 0 auto; }
+.cta-band h2{ margin-bottom: .5rem; }
+.cta-band > .cta-band-int > p{ max-width: 65ch; margin-bottom: 1.75rem; }
+.cta-grille{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+.cta-tuile{
+  display: block; background: var(--vert-fonce); color: var(--blanc);
+  border-radius: 14px; padding: 1.5rem 1.75rem; text-decoration: none;
+  transition: transform .15s ease;
+}
+.cta-tuile:hover{ transform: translateY(-3px); }
+.cta-tuile h3{ color: var(--blanc); font-size: 1.2rem; margin-bottom: .4rem; }
+.cta-tuile p{ margin: 0; font-size: .95rem; opacity: .95; }
+body.contraste .cta-tuile{ background: #000; border: 2px solid var(--focus); }
+body.contraste .cta-tuile h3{ color: var(--focus); }
 
 /* ---------- Cartes de navigation rapide (accueil) ---------- */
 .cartes-rapides{
@@ -284,13 +322,26 @@ body.contraste .lien-carte:hover{ color: #000; }
 /* ---------- Pied de page ---------- */
 footer.site{
   background: var(--noir); color: var(--blanc);
-  padding: 2rem 1rem; margin-top: 2rem; text-align: start;
+  padding: 3rem 1rem 1.5rem; margin-top: 2rem; text-align: start;
 }
 footer.site .int{ max-width: 62rem; margin: 0 auto; }
 footer.site a{ color: var(--blanc); }
 body.contraste footer.site{ border-top: 4px solid #FFD500; }
-.plan-site{ list-style: none; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 1.25rem 0; padding: 0; }
-.plan-site a{ font-weight: 700; }
+
+.footer-grille{
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.2);
+  margin-bottom: 1.5rem;
+}
+.footer-col h3{ color: var(--blanc); font-size: 1.05rem; margin-bottom: .9rem; border: none; padding: 0; }
+body.contraste .footer-col h3{ color: var(--focus); }
+.footer-col p{ font-size: .95rem; max-width: 32ch; margin-bottom: .5rem; }
+.footer-col ul{ list-style: none; }
+.footer-col li{ margin-bottom: .6rem; }
+.footer-col a{ font-size: .95rem; text-decoration: none; }
+.footer-col a:hover{ text-decoration: underline; }
+.footer-bas{ font-size: .9rem; opacity: .9; }
+.footer-bas p{ margin-bottom: .5rem; }
 
 @media (max-width: 640px){
   .heros h1{ font-size: 1.6rem; }
