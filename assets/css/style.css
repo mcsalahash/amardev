@@ -18,11 +18,13 @@
 html{ font-size: var(--taille-base); scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
 body{
-  font-family: "Atkinson Hyperlegible", Verdana, sans-serif;
+  font-family: "Atkinson Hyperlegible", "Noto Sans Arabic", Verdana, sans-serif;
   background: var(--blanc);
   color: var(--noir);
   line-height: 1.65;
 }
+html[lang="ar"] body{ font-family: "Noto Sans Arabic", Verdana, sans-serif; }
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3{ line-height: 1.5; }
 
 /* ---------- Contraste élevé ---------- */
 body.contraste{
@@ -37,11 +39,11 @@ body.contraste img.logo{ background: #FFFFFF; border-radius: 8px; padding: 6px; 
 
 /* ---------- Lien d'évitement ---------- */
 .skip{
-  position: absolute; left: -9999px; top: 0;
+  position: absolute; inset-inline-start: -9999px; top: 0;
   background: var(--noir); color: var(--blanc);
   padding: 1rem 1.5rem; font-weight: 700; z-index: 100;
 }
-.skip:focus{ left: 0; }
+.skip:focus{ inset-inline-start: 0; }
 
 a{ color: var(--vert-fonce); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
 body.contraste a{ color: var(--focus); }
@@ -54,7 +56,7 @@ body.contraste a{ color: var(--focus); }
   display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
   padding: .6rem 1rem;
 }
-.barre-acces span{ font-weight: 700; margin-right: .5rem; }
+.barre-acces span{ font-weight: 700; margin-inline-end: .5rem; }
 .barre-acces button{
   font: inherit; font-weight: 700; cursor: pointer;
   background: var(--blanc); color: var(--noir);
@@ -62,6 +64,16 @@ body.contraste a{ color: var(--focus); }
   padding: .35rem .9rem; min-height: 44px; min-width: 44px;
 }
 .barre-acces button[aria-pressed="true"]{ background: var(--focus); border-color: var(--focus); color: #000; }
+
+.lien-langue{
+  margin-inline-start: auto;
+  font: inherit; font-weight: 700; cursor: pointer;
+  background: transparent; color: var(--blanc);
+  border: 3px solid var(--blanc); border-radius: 6px;
+  padding: .35rem .9rem; min-height: 44px;
+  text-decoration: none; display: inline-flex; align-items: center;
+}
+.lien-langue:hover{ background: var(--blanc); color: var(--noir); }
 
 /* ---------- En-tête ---------- */
 header.site{
@@ -83,13 +95,13 @@ nav.principale ul{ list-style: none; display: flex; flex-wrap: wrap; gap: .5rem;
 nav.principale a{
   display: block; padding: .6rem 1.1rem; min-height: 44px;
   background: var(--gris-doux); color: var(--noir);
-  border-left: 6px solid var(--vert);
+  border-inline-start: 6px solid var(--vert);
   text-decoration: none; font-weight: 700; font-size: 1.02rem;
 }
 nav.principale a:hover{ background: var(--vert); color: var(--blanc); }
 body.contraste nav.principale a:hover{ color: #000; }
 nav.principale a[aria-current="page"]{
-  background: var(--vert-fonce); color: var(--blanc); border-left-color: var(--focus);
+  background: var(--vert-fonce); color: var(--blanc); border-inline-start-color: var(--focus);
 }
 body.contraste nav.principale a[aria-current="page"]{ color: #000; }
 
@@ -145,21 +157,21 @@ section{ padding: 3rem 0; border-bottom: 2px solid var(--gris-doux); }
 section:last-of-type{ border-bottom: none; }
 h2{
   font-size: 1.8rem; color: var(--vert-fonce);
-  border-left: 10px solid var(--vert); padding-left: .75rem;
+  border-inline-start: 10px solid var(--vert); padding-inline-start: .75rem;
   margin-bottom: 1.5rem;
 }
 h3{ font-size: 1.3rem; margin-bottom: .6rem; color: var(--vert-fonce); }
 p{ max-width: 72ch; margin-bottom: 1rem; }
 blockquote{
-  max-width: 65ch; margin: 1.25rem 0; padding: .25rem 0 .25rem 1.25rem;
-  border-left: 5px solid var(--vert); font-style: italic; font-size: 1.05rem;
+  max-width: 65ch; margin: 1.25rem 0; padding-block: .25rem; padding-inline-start: 1.25rem;
+  border-inline-start: 5px solid var(--vert); font-style: italic; font-size: 1.05rem;
 }
 blockquote cite{ display: block; margin-top: .4rem; font-style: normal; font-size: .95rem; }
 
 /* ---------- Axes de travail ---------- */
 .axe{
   background: var(--gris-doux);
-  border-left: 8px solid var(--vert);
+  border-inline-start: 8px solid var(--vert);
   padding: 1.5rem 1.75rem;
   margin-bottom: 1.75rem;
 }
@@ -264,7 +276,7 @@ body.contraste .lien-carte:hover{ color: #000; }
 /* ---------- Pied de page ---------- */
 footer.site{
   background: var(--noir); color: var(--blanc);
-  padding: 2rem 1rem; margin-top: 2rem; text-align: left;
+  padding: 2rem 1rem; margin-top: 2rem; text-align: start;
 }
 footer.site .int{ max-width: 62rem; margin: 0 auto; }
 footer.site a{ color: var(--blanc); }

@@ -2,8 +2,21 @@
   var racine = document.documentElement;
   var CLE_TAILLE = 'amardev-taille-texte';
   var CLE_CONTRASTE = 'amardev-contraste';
+  var langue = (racine.getAttribute('lang') || 'fr').toLowerCase();
+  var estArabe = langue.indexOf('ar') === 0;
 
-  /* --- Appliquer les préférences mémorisées dès le chargement --- */
+  var textes = estArabe ? {
+    pasDeVoix: 'خاصية القراءة الصوتية غير متوفرة في هذا المتصفح.',
+    ecouter: '🔊 استماع للصفحة',
+    arreter: '⏹ إيقاف القراءة',
+    voix: 'ar-SA'
+  } : {
+    pasDeVoix: "La lecture audio n'est pas disponible sur ce navigateur.",
+    ecouter: '🔊 Écouter la page',
+    arreter: '⏹ Arrêter la lecture',
+    voix: 'fr-FR'
+  };
+
   var tailleEnregistree = parseInt(localStorage.getItem(CLE_TAILLE), 10);
   var taille = (tailleEnregistree >= 16 && tailleEnregistree <= 32) ? tailleEnregistree : 20;
   racine.style.fontSize = taille + 'px';
@@ -52,30 +65,30 @@
       var enLecture = false;
       btnEcouter.addEventListener('click', function(){
         if (!('speechSynthesis' in window)){
-          alert("La lecture audio n'est pas disponible sur ce navigateur.");
+          alert(textes.pasDeVoix);
           return;
         }
         if (enLecture){
           window.speechSynthesis.cancel();
           enLecture = false;
           btnEcouter.setAttribute('aria-pressed', 'false');
-          btnEcouter.textContent = '🔊 Écouter la page';
+          btnEcouter.textContent = textes.ecouter;
           return;
         }
         var zone = document.getElementById('contenu') || document.body;
         var enonce = new SpeechSynthesisUtterance(zone.innerText);
-        enonce.lang = 'fr-FR';
+        enonce.lang = textes.voix;
         enonce.rate = 0.95;
         enonce.onend = function(){
           enLecture = false;
           btnEcouter.setAttribute('aria-pressed', 'false');
-          btnEcouter.textContent = '🔊 Écouter la page';
+          btnEcouter.textContent = textes.ecouter;
         };
         window.speechSynthesis.cancel();
         window.speechSynthesis.speak(enonce);
         enLecture = true;
         btnEcouter.setAttribute('aria-pressed', 'true');
-        btnEcouter.textContent = '⏹ Arrêter la lecture';
+        btnEcouter.textContent = textes.arreter;
       });
 
       window.addEventListener('beforeunload', function(){

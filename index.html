@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Accueil — AMARDEV</title>
 <meta name="description" content="AMARDEV, association marocaine créée en 2000, œuvre pour la réadaptation des personnes déficientes visuelles à Casablanca.">
+<link rel="alternate" hreflang="fr" href="index.html">
+<link rel="alternate" hreflang="ar" href="ar/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -20,6 +22,7 @@
   <button type="button" id="btn-plus" aria-label="Agrandir la taille du texte">A+</button>
   <button type="button" id="btn-contraste" aria-pressed="false">Contraste élevé</button>
   <button type="button" id="btn-ecouter" aria-pressed="false">🔊 Écouter la page</button>
+  <a class="lien-langue" href="ar/index.html" hreflang="ar" lang="ar">العربية</a>
 </div>
 
 <header class="site">
@@ -46,47 +49,39 @@
 
 <div class="heros">
   <div class="heros-int">
-    <div class="points-braille" aria-hidden="true">
-      <i></i><i></i><i></i><i></i><i></i><i></i>
-    </div>
+    <div class="points-braille" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <h1>Réadapter, c'est permettre de vivre pleinement.</h1>
     <p>Depuis 2000, AMARDEV introduit au Maroc le concept de réadaptation des personnes déficientes visuelles, pour leur permettre de s'intégrer dans la vie sociale, culturelle et professionnelle.</p>
   </div>
 </div>
 
 <main id="contenu">
-
   <section aria-labelledby="titre-liens">
     <h2 id="titre-liens">Découvrir AMARDEV</h2>
     <div class="cartes-rapides">
       <a class="carte-rapide" href="actualites.html">
         <span class="puce" aria-hidden="true">📰</span>
-        <h3>Actualités</h3>
-        <p>Nos derniers événements, salons et rencontres.</p>
+        <h3>Actualités</h3><p>Nos derniers événements, salons et rencontres.</p>
         <span class="fleche">Voir le fil d'actualités →</span>
       </a>
       <a class="carte-rapide" href="a-propos.html">
         <span class="puce" aria-hidden="true">🤝</span>
-        <h3>À propos</h3>
-        <p>Notre histoire et notre mission depuis 2000.</p>
+        <h3>À propos</h3><p>Notre histoire et notre mission depuis 2000.</p>
         <span class="fleche">En savoir plus →</span>
       </a>
       <a class="carte-rapide" href="actions.html">
         <span class="puce" aria-hidden="true">🎲</span>
-        <h3>Nos actions</h3>
-        <p>Ludothèque, centre de ressources, transcription braille.</p>
+        <h3>Nos actions</h3><p>Ludothèque, centre de ressources, transcription braille.</p>
         <span class="fleche">Découvrir nos actions →</span>
       </a>
       <a class="carte-rapide" href="publications.html">
         <span class="puce" aria-hidden="true">📚</span>
-        <h3>Publications</h3>
-        <p>Nos livres jeunesse transcrits en braille.</p>
+        <h3>Publications</h3><p>Nos livres jeunesse transcrits en braille.</p>
         <span class="fleche">Voir la galerie →</span>
       </a>
       <a class="carte-rapide" href="contact.html">
         <span class="puce" aria-hidden="true">✉️</span>
-        <h3>Nous contacter</h3>
-        <p>Téléphone, email et adresse à Casablanca.</p>
+        <h3>Nous contacter</h3><p>Téléphone, email et adresse à Casablanca.</p>
         <span class="fleche">Nous écrire →</span>
       </a>
     </div>
@@ -110,7 +105,6 @@
       </article>
     </div>
   </section>
-
 </main>
 
 <footer class="site">
