@@ -65,6 +65,19 @@ body.contraste a{ color: var(--focus); }
 }
 .barre-acces button[aria-pressed="true"]{ background: var(--focus); border-color: var(--focus); color: #000; }
 
+/* ---------- Bandeau site en construction ---------- */
+.chantier{
+  background: #FDF3E3;
+  border-bottom: 4px solid #B5670A;
+  color: #000;
+  padding: .85rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+body.contraste .chantier{ background: #1a1a1a; color: var(--focus); border-bottom-color: var(--focus); }
+.chantier span.icone{ font-size: 1.15rem; margin-inline-end: .5rem; }
+
 .lien-langue{
   margin-inline-start: auto;
   font: inherit; font-weight: 700; cursor: pointer;
