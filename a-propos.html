@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — AMARDEV</title>
+<meta name="description" content="Créée en mars 2000, l'AMARDEV est une association marocaine à but non lucratif pour la réadaptation des personnes déficientes visuelles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#contenu">Aller directement au contenu</a>
+
+<div class="barre-acces" role="region" aria-label="Outils d'accessibilité">
+  <span>Accessibilité :</span>
+  <button type="button" id="btn-moins" aria-label="Réduire la taille du texte">A−</button>
+  <button type="button" id="btn-plus" aria-label="Agrandir la taille du texte">A+</button>
+  <button type="button" id="btn-contraste" aria-pressed="false">Contraste élevé</button>
+  <button type="button" id="btn-ecouter" aria-pressed="false">🔊 Écouter la page</button>
+</div>
+
+<header class="site">
+  <div class="entete-int">
+    <a class="entete-lien" href="index.html">
+      <img class="logo" src="assets/img/logo.png" alt="Logo AMARDEV : une main verte touchant des points de braille au centre d'un œil stylisé">
+      <div>
+        <p class="nom-asso">AMARDEV</p>
+        <p class="devise">Association Marocaine pour la Réadaptation des Déficients Visuels</p>
+      </div>
+    </a>
+    <nav class="principale" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="a-propos.html" aria-current="page">À propos</a></li>
+        <li><a href="actions.html">Nos actions</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Nous contacter</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="titre-page">
+  <div class="titre-page-int">
+    <p class="fil-ariane"><a href="index.html">Accueil</a> &nbsp;/&nbsp; À propos</p>
+    <h1>À propos</h1>
+    <p>Notre histoire, notre mission et nos convictions depuis 2000.</p>
+  </div>
+</div>
+
+<main id="contenu">
+  <section aria-label="Présentation de l'association">
+    <p>Créée en mars 2000, l'AMARDEV est une association à but non lucratif qui s'occupe des personnes déficientes visuelles. Son objectif principal est d'introduire au Maroc le concept de réadaptation des déficients visuels.</p>
+    <p>Réadapter une personne déficiente visuelle, c'est mettre à sa disposition tous les moyens d'ordre technique et autres afin de lui permettre d'accomplir les actes courants de la vie quotidienne. La réadaptation lui permet de s'intégrer dans la vie sociale, culturelle et professionnelle.</p>
+    <p>L'AMARDEV a pour but d'expliquer aux partenaires gouvernementaux la nécessité de mettre en place des programmes scolaires et culturels, ainsi que des formations professionnelles pour exercer un métier.</p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="int">
+    <p><strong>AMARDEV</strong> — Association Marocaine pour la Réadaptation des Déficients Visuels, Casablanca.</p>
+    <ul class="plan-site" aria-label="Plan du site">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="actions.html">Nos actions</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="contact.html">Nous contacter</a></li>
+    </ul>
+    <p>Ce site est conçu pour être accessible : navigation au clavier, compatibilité avec les lecteurs d'écran, contraste élevé et lecture audio intégrée sur chaque page. Un problème d'accessibilité ? <a href="contact.html">Signalez-le nous</a>.</p>
+  </div>
+</footer>
+
+<script src="assets/js/accessibilite.js"></script>
+</body>
+</html>
