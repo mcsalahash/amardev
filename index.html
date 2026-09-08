@@ -159,6 +159,71 @@
     border-radius: 6px; border: 2px solid var(--vert);
   }
   .galerie-pubs figcaption{ font-size: .9rem; margin-top: .4rem; text-align: center; }
+
+  /* ---------- Fil d'actualités ---------- */
+  .actus{
+    background: linear-gradient(180deg, var(--gris-doux) 0%, var(--blanc) 100%);
+  }
+  .fil-actus{ display: grid; gap: 1.75rem; }
+
+  .carte-actu{
+    background: var(--blanc);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(14,77,32,.10), 0 1px 2px rgba(0,0,0,.06);
+    border: 1px solid var(--gris-doux);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  body.contraste .carte-actu{ border-color: #333; box-shadow: none; }
+  .carte-actu:hover{ transform: translateY(-3px); box-shadow: 0 8px 22px rgba(14,77,32,.18); }
+
+  .carte-actu.une{ border: 2px solid var(--vert); }
+
+  .badge-une{
+    display: inline-flex; align-items: center; gap: .4rem;
+    background: linear-gradient(90deg, var(--vert) 0%, var(--vert-fonce) 100%);
+    color: var(--blanc); font-weight: 700; font-size: .85rem;
+    padding: .3rem .85rem; border-radius: 999px;
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  body.contraste .badge-une{ background: var(--focus); color: #000; }
+
+  .actu-cover{
+    width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;
+    background: var(--gris-doux);
+  }
+  .actu-corps{ padding: 1.5rem 1.75rem; }
+  .actu-meta{
+    display: flex; flex-wrap: wrap; gap: .6rem; align-items: center;
+    margin-bottom: .9rem;
+  }
+  .pastille{
+    font-size: .85rem; font-weight: 700; padding: .25rem .75rem;
+    border-radius: 999px; background: var(--gris-doux); color: var(--vert-fonce);
+    border: 1.5px solid var(--vert);
+  }
+  body.contraste .pastille{ background: #000; color: var(--focus); border-color: var(--focus); }
+  .actu-date{ font-size: .95rem; opacity: .85; }
+
+  .actu-corps h3{ font-size: 1.5rem; margin-bottom: .75rem; color: var(--vert-fonce); }
+  .carte-actu.une .actu-corps h3{ font-size: 1.75rem; }
+  .actu-corps p{ margin-bottom: 1rem; }
+
+  .galerie-actu{
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: .6rem; margin-top: 1.25rem;
+  }
+  .galerie-actu img{
+    width: 100%; height: 130px; object-fit: cover; border-radius: 10px;
+    border: 1px solid var(--gris-doux);
+  }
+
+  .actus-a-venir{
+    text-align: center; padding: 2rem 1.5rem;
+    border: 2px dashed var(--vert);
+    border-radius: 16px; color: var(--vert-fonce); font-weight: 700;
+  }
+  body.contraste .actus-a-venir{ color: var(--focus); }
   .horaires{
     display: inline-block; background: var(--blanc); border: 2px solid var(--vert);
     padding: .75rem 1rem; margin: 1rem 0; font-size: .98rem;
@@ -206,6 +271,7 @@
     </div>
     <nav class="principale" aria-label="Menu principal">
       <ul>
+        <li><a href="#actualites">Actualités</a></li>
         <li><a href="#a-propos">À propos</a></li>
         <li><a href="#axes-de-travail">Axes de travail</a></li>
         <li><a href="#publications">Nos publications</a></li>
@@ -226,6 +292,36 @@
 </div>
 
 <main id="contenu">
+
+  <section id="actualites" class="actus" aria-labelledby="titre-actus">
+    <h2 id="titre-actus">Actualités</h2>
+    <div class="fil-actus">
+
+      <article class="carte-actu une">
+        <img class="actu-cover" src="assets/img/actualites/siel-3.jpg" alt="Une bénévole AMARDEV explique une planche en braille à un groupe de collégiens venus visiter le stand au salon du livre">
+        <div class="actu-corps">
+          <div class="actu-meta">
+            <span class="badge-une">★ À la une</span>
+            <span class="pastille">SIEL Rabat</span>
+            <span class="actu-date">2 mai 2026</span>
+          </div>
+          <h3>AMARDEV au SIEL de Rabat : le braille se découvre du bout des doigts !</h3>
+          <p>Direction le Salon International de l'Édition et du Livre (SIEL) à Rabat, où l'équipe d'AMARDEV a tenu son stand E29 tout au long de l'événement. Au programme : ateliers de découverte du braille, jeux tactiles et rencontres avec des centaines de visiteurs, petits et grands.</p>
+          <p>Des classes entières d'élèves sont venues à la rencontre de nos bénévoles pour s'initier à la lecture tactile, manipuler des supports en relief et repartir avec des cartes braille à leur nom. Un beau moment de curiosité et de partage, où chaque enfant a pu réaliser à quel point « lire avec les doigts » demande de la concentration… et beaucoup d'entraînement !</p>
+          <p>Merci à toutes les personnes qui se sont arrêtées au stand E29 pour échanger, essayer et repartir avec un peu plus de sensibilité à la déficience visuelle. Rendez-vous à la prochaine édition du salon.</p>
+          <div class="galerie-actu">
+            <img src="assets/img/actualites/siel-1.jpg" alt="Une visiteuse fait découvrir un jeu tactile à un enfant sur le stand AMARDEV">
+            <img src="assets/img/actualites/siel-2.jpg" alt="Un bénévole présente des jeux en relief à un groupe d'élèves sur le stand">
+            <img src="assets/img/actualites/siel-4.jpg" alt="Des enfants s'initient à la lecture d'une planche en braille sur le stand AMARDEV">
+            <img src="assets/img/actualites/siel-5.jpg" alt="Deux jeunes visiteuses s'exercent à l'écriture braille avec une règle et un poinçon, à côté d'un livre sur Louis Braille">
+          </div>
+        </div>
+      </article>
+
+      <div class="actus-a-venir">D'autres actualités seront bientôt publiées ici.</div>
+
+    </div>
+  </section>
 
   <section id="a-propos" aria-labelledby="titre-apropos">
     <h2 id="titre-apropos">À propos</h2>
