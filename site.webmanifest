@@ -1,0 +1,13 @@
+{
+  "name": "AMARDEV — Association Marocaine pour la Réadaptation des Déficients Visuels",
+  "short_name": "AMARDEV",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0E4D20",
+  "lang": "fr",
+  "icons": [
+    { "src": "/assets/img/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

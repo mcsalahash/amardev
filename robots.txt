@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://green-tree-096f29510.5.azurestaticapps.net/sitemap.xml
