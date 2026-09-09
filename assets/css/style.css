@@ -207,6 +207,11 @@ body.contraste .carte-rapide .fleche{ color: var(--focus); }
 
 /* ---------- Contenu générique ---------- */
 main{ max-width: 62rem; margin: 0 auto; padding: 0 1rem; }
+/* Elements qui doivent s'étendre pleine largeur même en étant enfants de <main> */
+.hero-afb, .titre-page, .cta-band{
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
 section{ padding: 3rem 0; border-bottom: 2px solid var(--gris-doux); }
 section:last-of-type{ border-bottom: none; }
 h2{

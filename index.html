@@ -64,14 +64,14 @@
 
 <div class="barre-acces" role="region" aria-label="Outils d'accessibilité">
   <span>Accessibilité :</span>
-  <button type="button" id="btn-moins" aria-label="Réduire la taille du texte">A−</button>
-  <button type="button" id="btn-plus" aria-label="Agrandir la taille du texte">A+</button>
+  <button type="button" id="btn-moins" aria-label="A− — Réduire la taille du texte">A−</button>
+  <button type="button" id="btn-plus" aria-label="A+ — Agrandir la taille du texte">A+</button>
   <button type="button" id="btn-contraste" aria-pressed="false">Contraste élevé</button>
   <button type="button" id="btn-ecouter" aria-pressed="false">🔊 Écouter la page</button>
   <a class="lien-langue" href="ar/index.html" hreflang="ar" lang="ar">العربية</a>
 </div>
 
-<div class="chantier" role="status">
+<div class="chantier" role="region" aria-label="Avis important">
   <span class="icone" aria-hidden="true">🚧</span>Ce site est encore en construction : de nouvelles pages et actualités arrivent bientôt.
 </div>
 
@@ -96,6 +96,7 @@
     </nav>
   </div>
 </header>
+<main id="contenu">
 
 <div class="hero-afb">
   <div class="hero-texte">
@@ -112,7 +113,6 @@
   </div>
 </div>
 
-<main id="contenu">
   <section aria-labelledby="titre-liens">
     <h2 id="titre-liens">Découvrir AMARDEV</h2>
     <div class="cartes-rapides">
@@ -161,7 +161,6 @@
       </article>
     </div>
   </section>
-</main>
 
 <div class="cta-band">
   <div class="cta-band-int">
@@ -183,6 +182,7 @@
     </div>
   </div>
 </div>
+</main>
 
 <footer class="site">
   <div class="int">

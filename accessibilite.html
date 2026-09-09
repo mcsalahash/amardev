@@ -64,14 +64,14 @@
 
 <div class="barre-acces" role="region" aria-label="Outils d'accessibilité">
   <span>Accessibilité :</span>
-  <button type="button" id="btn-moins" aria-label="Réduire la taille du texte">A−</button>
-  <button type="button" id="btn-plus" aria-label="Agrandir la taille du texte">A+</button>
+  <button type="button" id="btn-moins" aria-label="A− — Réduire la taille du texte">A−</button>
+  <button type="button" id="btn-plus" aria-label="A+ — Agrandir la taille du texte">A+</button>
   <button type="button" id="btn-contraste" aria-pressed="false">Contraste élevé</button>
   <button type="button" id="btn-ecouter" aria-pressed="false">🔊 Écouter la page</button>
   <a class="lien-langue" href="ar/accessibilite.html" hreflang="ar" lang="ar">العربية</a>
 </div>
 
-<div class="chantier" role="status">
+<div class="chantier" role="region" aria-label="Avis important">
   <span class="icone" aria-hidden="true">🚧</span>Ce site est encore en construction : de nouvelles pages et actualités arrivent bientôt.
 </div>
 
@@ -96,6 +96,7 @@
     </nav>
   </div>
 </header>
+<main id="contenu">
 
 <script type="application/ld+json">
 {
@@ -125,7 +126,6 @@
   </div>
 </div>
 
-<main id="contenu">
   <section aria-label="Notre engagement">
     <h2>Notre engagement</h2>
     <p>AMARDEV conçoit ce site avant tout pour un public de personnes non-voyantes et malvoyantes. L'accessibilité n'est pas une option ajoutée après coup : c'est le point de départ de chaque page.</p>
