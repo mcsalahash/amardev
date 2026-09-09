@@ -369,9 +369,9 @@ body.bandeau-cookies-visible .retour-haut{ bottom: 6.5rem; }
 .bandeau-cookies button{
   font: inherit; font-weight: 700; min-height: 44px; padding: .6rem 1.4rem;
   border-radius: 8px; cursor: pointer; border: 2px solid var(--blanc);
-  background: var(--vert); color: #fff;
+  background: var(--vert-fonce); color: #fff;
 }
-.bandeau-cookies button:hover{ background: var(--vert-fonce); }
+.bandeau-cookies button:hover{ background: var(--vert); }
 .bandeau-cookies button:focus-visible{ outline: 4px solid var(--focus); outline-offset: 2px; }
 body.contraste .bandeau-cookies{ background: #000; border-top: 2px solid var(--focus); }
 body.contraste .bandeau-cookies button{ background: var(--focus); color: #000; border-color: var(--focus); }
