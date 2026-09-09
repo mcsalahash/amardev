@@ -145,7 +145,10 @@ body.contraste .hero-afb{ background: #000; color: #FFD500; border-bottom: 4px s
 .hero-afb .hero-texte p{ font-size: 1.15rem; max-width: 48ch; margin: 0; }
 .hero-afb .hero-boutons{ display: flex; flex-wrap: wrap; gap: .9rem; margin-top: .5rem; }
 .hero-afb .hero-photo{
-  flex: 1 1 360px; min-height: 320px; background-size: cover; background-position: center;
+  flex: 1 1 360px; min-height: 320px; overflow: hidden;
+}
+.hero-afb .hero-photo img{
+  width: 100%; height: 100%; min-height: 320px; object-fit: cover; display: block;
 }
 .points-braille{
   display: inline-grid; grid-template-columns: repeat(2, 14px); gap: 7px;
@@ -270,7 +273,7 @@ body.contraste .carte-actu{ border-color: #333; box-shadow: none; }
 
 .badge-une{
   display: inline-flex; align-items: center; gap: .4rem;
-  background: linear-gradient(90deg, var(--vert) 0%, var(--vert-fonce) 100%);
+  background: var(--vert-fonce);
   color: var(--blanc); font-weight: 700; font-size: .85rem;
   padding: .3rem .85rem; border-radius: 999px;
   letter-spacing: .04em; text-transform: uppercase;

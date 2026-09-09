@@ -86,7 +86,7 @@
       </div>
     </a>
     <nav class="principale" aria-label="القائمة الرئيسية">
-      <ul>
+      <ul role="list">
         <li><a href="index.html" aria-current="page">الرئيسية</a></li>
         <li><a href="actualites.html">الأخبار</a></li>
         <li><a href="a-propos.html">من نحن</a></li>
@@ -108,7 +108,9 @@
       <a class="bouton-cta secondaire" href="actualites.html">مشاهدة أخبارنا</a>
     </div>
   </div>
-  <div class="hero-photo" role="img" aria-label="مجموعة كبيرة من المستفيدين والعائلات ومتطوعي أمارديف تلتقط صورة جماعية مبتهجة، بأيدٍ مرفوعة، على كورنيش البحر خلال خرجة نظمتها الجمعية" style="background-image:url('../assets/img/hero-accueil.jpg')"></div>
+  <div class="hero-photo">
+    <img src="../assets/img/hero-accueil.jpg" alt="مجموعة كبيرة من المستفيدين والعائلات ومتطوعي أمارديف تلتقط صورة جماعية مبتهجة، بأيدٍ مرفوعة، على كورنيش البحر خلال خرجة نظمتها الجمعية" width="960" height="720">
+  </div>
 </div>
 
 <main id="contenu">
@@ -118,27 +120,27 @@
       <a class="carte-rapide" href="actualites.html">
         <span class="puce" aria-hidden="true">📰</span>
         <h3>الأخبار</h3><p>أحدث فعالياتنا ومعارضنا ولقاءاتنا.</p>
-        <span class="fleche">اطّلع على الأخبار ←</span>
+        <span class="fleche">اطّلع على الأخبار <span aria-hidden="true">←</span></span>
       </a>
       <a class="carte-rapide" href="a-propos.html">
         <span class="puce" aria-hidden="true">🤝</span>
         <h3>من نحن</h3><p>قصتنا ورسالتنا منذ سنة 2000.</p>
-        <span class="fleche">معرفة المزيد ←</span>
+        <span class="fleche">معرفة المزيد <span aria-hidden="true">←</span></span>
       </a>
       <a class="carte-rapide" href="actions.html">
         <span class="puce" aria-hidden="true">🎲</span>
         <h3>أنشطتنا</h3><p>المكتبة الترفيهية، مركز الموارد، نسخ برايل.</p>
-        <span class="fleche">اكتشف أنشطتنا ←</span>
+        <span class="fleche">اكتشف أنشطتنا <span aria-hidden="true">←</span></span>
       </a>
       <a class="carte-rapide" href="publications.html">
         <span class="puce" aria-hidden="true">📚</span>
         <h3>إصداراتنا</h3><p>كتبنا الموجهة للأطفال، منسوخة بطريقة برايل.</p>
-        <span class="fleche">مشاهدة المعرض ←</span>
+        <span class="fleche">مشاهدة المعرض <span aria-hidden="true">←</span></span>
       </a>
       <a class="carte-rapide" href="contact.html">
         <span class="puce" aria-hidden="true">✉️</span>
         <h3>اتصل بنا</h3><p>الهاتف والبريد الإلكتروني والعنوان بالدار البيضاء.</p>
-        <span class="fleche">راسلنا ←</span>
+        <span class="fleche">راسلنا <span aria-hidden="true">←</span></span>
       </a>
     </div>
   </section>
@@ -149,13 +151,13 @@
       <article class="carte-actu une">
         <div class="actu-corps">
           <div class="actu-meta">
-            <span class="badge-une">★ الحدث البارز</span>
+            <span class="badge-une"><span aria-hidden="true">★</span> الحدث البارز</span>
             <span class="pastille">حوار</span>
             <span class="actu-date">2 ماي 2026</span>
           </div>
           <h3>«الثقافة أداة لإدماج الكفيف»: كلمة رئيس أمارديف في المعرض الدولي للكتاب</h3>
           <p>السيد رشيد الرفاعي، رئيس أمارديف، يتحدث في شهادة مصورة عن دور رواق الجمعية في المعرض الدولي للنشر والكتاب: صوت للأشخاص المكفوفين وضعاف البصر.</p>
-          <p><a href="actualites.html">قراءة المقال كاملاً ←</a></p>
+          <p><a href="actualites.html">قراءة المقال كاملاً <span aria-hidden="true">←</span></a></p>
         </div>
       </article>
     </div>
@@ -192,7 +194,7 @@
       </div>
       <div class="footer-col">
         <h3>روابط الموقع</h3>
-        <ul>
+        <ul role="list">
           <li><a href="index.html">الرئيسية</a></li>
           <li><a href="actualites.html">الأخبار</a></li>
           <li><a href="a-propos.html">من نحن</a></li>
@@ -203,7 +205,7 @@
       </div>
       <div class="footer-col">
         <h3>تواصل معنا</h3>
-        <ul>
+        <ul role="list">
           <li>الهاتف : <a href="tel:+212522367319" dir="ltr" lang="en">+212 5 22 36 73 19</a></li>
           <li>البريد الإلكتروني : <a href="mailto:amardevasso@gmail.com" dir="ltr" lang="en">amardevasso@gmail.com</a></li>
         </ul>
